@@ -1,29 +1,16 @@
 <template>
-  <div>
     <a
       v-if="!disabled"
       :href="url"
       :class="`${variant} ${disabled}`"
       :disabled="disabled"
+       class="button"
     >
       <span v-if="icon.length" class="button--icon">
         <slot name="svgContent"></slot>
       </span>
       <slot>{{ text }}</slot>
     </a>
-    <div
-      v-else
-      :class="`${variant}`"
-      :disabled="disabled"
-      class="disabled true"
-      aria-label="disabled button"
-    >
-      <span v-if="icon.length" class="button--icon">
-        <slot name="svgContent"></slot>
-      </span>
-      <slot>{{ text }}</slot>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -48,10 +35,7 @@ export default {
       required: false,
       default: "icon"
     },
-    disabled: {
-      type: Boolean,
-      default: false
-    }
+    
   }
 };
 </script>
@@ -60,6 +44,8 @@ export default {
 .button,
 button {
   color: $white;
+  background: $black;
+  padding: 14px 24px;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -77,8 +63,16 @@ button {
     fill: $white;
     height: rem(18px);
   }
+  &:hover {
+    background-color: $lightgrey;
+    color: $black;
+  }
 }
 .button--icon {
   height: rem(18px);
 }
-</style>
+.secondary {
+  border: 3px solid grey;
+  background-color: $lightgrey;
+}
+</style> 

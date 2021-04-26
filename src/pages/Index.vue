@@ -1,9 +1,9 @@
 <template>
   <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
+    <g-image alt="Example image" src="~/assets/images/bc-shop-s.jpg" width="250" />
 
-    <h1>Hello, world!</h1>
+    <h1>Brixton Cycles Club</h1>
 
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
@@ -12,11 +12,31 @@
     </p>
 
     <Button
-      url="http://www.brixtoncycles.com"
+      url="http://www.brixtoncycles.co.uk"
       text="Button Test"
       variant="primary"
+      icon='light'
     />
-    <Card />
+    <Card /> 
+
+    <Button
+      url="http://www.brixtoncycles.co.uk"
+      text="Button Secondary"
+      variant="secondary" 
+      icon='light'
+    >
+      <svgContent>
+        SVG 
+      </svgContent>
+    </Button>
+
+     <Button
+      url="http://www.brixtoncycles.co.uk"
+      text="Button Secondary"
+      variant="secondary" 
+      icon='light'
+    />
+
 
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener"
